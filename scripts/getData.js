@@ -11,8 +11,8 @@ const getPhotos = async (source) =>{
     data.forEach(item=>{
         const {url, title} = item;
         mostrarFotos.innerHTML +=`
-        <div class="col mascotas">
-        <a href="#" class="enlace-detalle-mascota">
+        <div class="col fotos">
+        <a href="#" class="enlace-detalle-fotos">
             <div class="card bg-dark text-white gradiente">                
             <img src="${url}" class="card-img" alt="...">
                 <div class="card-img-overlay">
@@ -25,8 +25,5 @@ const getPhotos = async (source) =>{
     })
 }
 
-/*////////////////////////////////////*/
-
 myBtn.addEventListener('click', ()=>{getPhotos('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=50')})
 
-//myBtn.addEventListener('click', ()=> alert('hola'))
